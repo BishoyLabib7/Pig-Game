@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background-image: url('../images/Background.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Header */
+.title {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 1%;
+  padding: 0.7rem 2.5rem;
+}
+.title img {
+  width: 320px;
+}
+
+/* Rules */
+.rules {
+  position: absolute;
+  z-index: 10;
+  top: 0%;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: inset 0 -0.6em 0 -0.25em rgba(0, 0, 0, 0.17);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+ul {
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 2;
+  margin: 0;
+}
+
+/* Classes to make model work */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  overflow-y: scroll;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+/* Layout */
+main {
+  position: relative;
+  width: 95%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s;
+}
+
+/* Elements */
+.name {
+  position: relative;
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+  font-weight: 700;
+}
+.player--active .score {
+  font-weight: 400;
+}
+
+.player--active .current {
+  opacity: 1;
+}
+
+.current {
+  background-color: #c7365f;
+  opacity: 0.8;
+  border-radius: 9px;
+  color: #fff;
+
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s;
+}
+
+.current-label {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  color: #ddd;
+}
+
+.current-score {
+  font-size: 3.5rem;
+}
+
+/* Absolute Positioned Elements */
+.btn {
+  position: absolute;
+
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  width: 20%;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.btn::first-letter {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin-right: 0.7rem;
+}
+
+.btn--new {
+  left: 15%;
+  top: 2%;
+}
+.btn--roll {
+  top: 33.3rem;
+  left: 50%;
+}
+.btn--hold {
+  top: 40.1rem;
+  left: 50%;
+}
+.btn--rules {
+  left: 95%;
+  top: 2%;
+  font-weight: 1000;
+  border-radius: 50%;
+  padding: 5px 12px;
+  width: 4%;
+}
+
+/* If Botton Is Active */
+/* .btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+} */
+
+.btn:focus {
+  outline: none;
+}
+
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.player--winner {
+  background: #f7f7f7;
+  background-image: url('../images/winner.gif');
+  background-size: contain;
+}
+
+.player--winner .name {
+  font-size: 60px;
+  font-weight: 700;
+  color: #c7365f;
+}
+@media (min-width: 768px) {
+  .current {
+    width: 65%;
+  }
+}
+/* Small */
+@media (max-width: 768px) {
+  .title img {
+    width: 200px;
+  }
+  .dice {
+    width: 8rem;
+    height: 8rem;
+  }
+  .player {
+    width: 50%;
+  }
+  .current-label {
+    font-size: 90%;
+  }
+  .player--winner .name,
+  .name {
+    font-size: 3rem;
+  }
+  .score {
+    font-size: 6rem;
+  }
+  .btn--hold {
+    top: 42.1rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-height: 600px) {
+  .title img {
+    width: 200px;
+  }
+  .dice {
+    width: 6rem;
+    height: 6rem;
+    top: 87px;
+  }
+  .player {
+    width: 50%;
+    padding: 3rem;
+  }
+  .current-label {
+    font-size: 90%;
+  }
+  .player--winner .name,
+  .name {
+    font-size: 3rem;
+    top: 13px;
+  }
+  .score {
+    font-size: 6rem;
+  }
+  .btn--hold {
+    top: 23rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .btn--roll {
+    top: 17rem;
+  }
+}
+/* Medium */
+@media (max-width: 470px) {
+  .title img {
+    width: 200px;
+  }
+  .dice {
+    width: 5rem;
+    height: 5rem;
+    top: 14rem;
+  }
+  .player {
+    width: 50%;
+  }
+  .current-label {
+    font-size: 90%;
+  }
+  .player--winner .name,
+  .name {
+    font-size: 3rem;
+  }
+  .score {
+    font-size: 6rem;
+  }
+  .btn--hold {
+    top: 42.1rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .btn--new {
+    width: 40%;
+    left: 80px;
+  }
+  .btn--hold {
+    top: 40rem;
+  }
+  .btn--roll {
+    top: 30rem;
+  }
+  .modal {
+    width: 100%;
+    height: 100%;
+  }
+}

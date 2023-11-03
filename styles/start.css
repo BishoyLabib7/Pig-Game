@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Header */
+.start .title {
+  position: absolute;
+  z-index: 3;
+  transform: translateX(-50%);
+  border: none;
+  text-transform: uppercase;
+  left: 50%;
+  top: 1%;
+  padding: 0.7rem 2.5rem;
+}
+
+/* Elements */
+.start h3 {
+  text-align: center;
+  width: 130%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 85px;
+  font-size: 60px;
+  color: #dddada;
+}
+.start .play {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  top: 40%;
+  width: 100%;
+}
+
+.start .player1,
+.start .player2 {
+  font-size: 50px;
+  margin-top: 30px;
+  color: white;
+  font-weight: 800;
+  text-align: center;
+}
+
+.start input {
+  padding: 20px;
+  background: transparent;
+  border-color: white;
+  font-size: 20px;
+  color: bisque;
+  border-radius: 10%;
+}
+.start input::placeholder {
+  color: #f7f7f775;
+}
+
+.start .btn {
+  bottom: 5%;
+  left: 50%;
+  font-size: 2.8rem;
+  border-radius: 10%;
+}
+
+.hidden {
+  display: none;
+}
+/* @media (max-width: 768px) {
+  .start h3 {
+    font-size: 5rem;
+  }
+
+  .start .btn {
+    font-size: 2rem;
+  }
+  .start .player1,
+  .start .player2 {
+    font-size: 3.5rem;
+  }
+  .start input {
+    font-size: 15px;
+    margin-top: 25px;
+  }
+} */
+
+@media (max-width: 730px) {
+  .start h3 {
+    font-size: 3rem;
+  }
+  .start .play {
+    flex-direction: column;
+    top: 100px;
+  }
+  .start .btn {
+    font-size: 2rem;
+    width: 50%;
+  }
+  .start .player1,
+  .start .player2 {
+    font-size: 3.5rem;
+  }
+  .start input {
+    font-size: 15px;
+    margin-bottom: 25px;
+    margin-top: 0;
+  }
+}
+@media (max-height: 587px) {
+  .start h3 {
+    margin-top: 45px;
+    font-size: 37px;
+  }
+  .start .play {
+    flex-direction: row;
+    top: 130px;
+  }
+  .start .player1,
+  .start .player2 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+  .start input {
+    font-size: 10px;
+    margin-top: 15px;
+  }
+  .start .btn {
+    font-size: 1.8rem;
+  }
+}
