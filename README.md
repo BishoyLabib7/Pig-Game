@@ -1,7 +1,7 @@
 # PIG GAME
 
-![Pig_Game](https://raw.githubusercontent.com/BishoyLabib7/Pig-Game/main/images/Pig-Game%201.jpg)
-![Pig_Game](https://raw.githubusercontent.com/BishoyLabib7/Pig-Game/main/images/Pig-Game%202.jpg)
+![Pig_Game](https://raw.githubusercontent.com/BishoyLabib7/Pig-Game/main/images/Pig%20Game%201.jpg)
+![Pig_Game](https://raw.githubusercontent.com/BishoyLabib7/Pig-Game/main/images/Pig%20Game%202.jpg)
 
 The game follows the classic rules of Pig, where the objective is to be the first player to reach a score of 100.
 Players take turns rolling a pair of dice and accumulating points based on the values rolled. If a player rolls a "1" on either die, their turn ends and they lose all their accumulated points for that turn. However, players can choose to hold their current score and pass the dice to the next player before rolling a "1".
